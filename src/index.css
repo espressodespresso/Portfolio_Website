@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer components {
+  #nav-theme {
+    background: rgba(244, 243, 239, 0.6);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    border: 1px solid rgba(244, 243, 239, 0.15);
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease;
+  }
+
+  #nav {
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 9 !important;
+  }
+
+  #nav-toggle {
+    transition: transform 0.8s ease;
+  }
+
+  .redact-nav {
+    transform: translateX(-120%);
+  }
+
+  .redact-toggle {
+    transform: translateX(-350%) rotateY(180deg);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .spacer {
+    aspect-ratio: 900/200;
+    width: 100%;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .layer1 {
+    background-image: url('./assets/transitions/back1.svg');
+    animation: wiggle-animation 2s ease-in-out infinite;
+  }
+
+  .layer2 {
+    background-image: url('./assets/transitions/back2.svg');
+  }
+
+  .layer3 {
+    background-image: url('./assets/transitions/back3.svg');
+  }
+
+  .tech {
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 20% 80%;
+  }
+
+  .tech-grid {
+    min-width: 30rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  --ease-in-out: cubic-bezier(0, 1, 0, 1);
+}
+
+body {
+  background-color: #f4f3ef;
+  color: darkslategrey;
+}
+
+section {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

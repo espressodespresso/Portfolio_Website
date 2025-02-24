@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "attendance",
+      "name": "Attendance System",
+      "language": "Typescript",
+      "description": "Here is a bit about this project",
+      "date_of_completion": "12/12/12",
+      "img": "",
+      "url": ""
+    },
+    {
+      "id": "snake",
+      "name": "Snake Game",
+      "language": "Rust",
+      "description": "Here is a bit about this project",
+      "date_of_completion": "12/12/12",
+      "img": "",
+      "url": ""
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris Game",
+      "language": "C-Sharp",
+      "description": "Here is a bit about this project",
+      "date_of_completion": "12/12/12",
+      "img": "",
+      "url": ""
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging App",
+      "language": "Java",
+      "description": "Here is a bit about this project",
+      "date_of_completion": "12/12/12",
+      "img": "",
+      "url": ""
+    }
+  ]
+}
