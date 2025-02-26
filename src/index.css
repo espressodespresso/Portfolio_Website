@@ -45,7 +45,6 @@
 
   .layer1 {
     background-image: url('./assets/transitions/back1.svg');
-    animation: wiggle-animation 2s ease-in-out infinite;
   }
 
   .layer2 {
@@ -82,4 +81,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.inputBackground {
+  background: rgba(95, 95, 95, 0.5);
 }

@@ -27,6 +27,7 @@ export default function Navbar(): JSXElement {
                         <NavLink name="Linkedin" href="https://www.linkedin.com/in/harry-martel-062151230/"/>
                         <NavLink name="Email" href="mailto:harry.martel@hotmail.com"/>
                     </NavSection>
+                    <p class="absolute bottom-4 left-6 opacity-40 italic text-xs">Made by Harry Martel</p>
                 </div>
             </div>
             <button type="button" class="pl-5 pt-8" id="nav-toggle" onclick={() => {
