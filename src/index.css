@@ -64,6 +64,10 @@
   .tech-grid {
     min-width: 30rem;
   }
+
+  .inputBackground {
+    background: rgba(95, 95, 95, 0.5);
+  }
 }
 
 html {
@@ -83,6 +87,16 @@ section {
   justify-content: center;
 }
 
-.inputBackground {
-  background: rgba(95, 95, 95, 0.5);
+h3 {
+  font-weight: bold;
+}
+
+@layer pages {
+  #project_name {
+    min-height: 100vh !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
 }

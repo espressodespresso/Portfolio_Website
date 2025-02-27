@@ -1,5 +1,4 @@
 import {JSXElement} from "solid-js";
-import SocialButton from "../components/buttons/SocialButton.tsx";
 import Card, {cardTypes} from "../components/Card.tsx";
 import Tech from "../components/Tech.tsx";
 
@@ -7,11 +6,8 @@ import img from "../assets/icons/test.jpeg";
 import ts from "../assets/icons/ts.svg";
 import rust from "../assets/icons/rust.svg";
 import csharp from "../assets/icons/csharp.svg";
-import github from "../assets/icons/github.svg";
-import linkedin from "../assets/icons/linkedin.svg";
-import mail from "../assets/icons/mail.svg";
-import x from "../assets/icons/x.svg";
 import Input from "../components/Input.js";
+import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
 
 export default function Home(): JSXElement {
     return (
@@ -29,18 +25,7 @@ export default function Home(): JSXElement {
                     <br/>
                     <p>I'm a aspiring graduate Software Engineer pursuing a Master's Degree</p>
                     <br/>
-                    <SocialButton href="https://github.com/espressodespresso">
-                        <img src={github} width="30em" alt="github logo"/>
-                    </SocialButton>
-                    <SocialButton href="https://twitter.com/ThatDuds">
-                        <img src={x} width="30em" alt="twitter logo"/>
-                    </SocialButton>
-                    <SocialButton href="https://www.linkedin.com/in/harry-martel-062151230/">
-                        <img src={linkedin} width="30em" alt="linkedin logo"/>
-                    </SocialButton>
-                    <SocialButton href="mailto:harry.martel@hotmail.com">
-                        <img src={mail} width="30em" alt="mail logo"/>
-                    </SocialButton>
+                    <SocialButtonGroup />
                 </div>
             </section>
             <div class="spacer layer1"/>
@@ -98,7 +83,7 @@ export default function Home(): JSXElement {
                     </div>
                 </div>
             </section>
-            <div class="spacer layer3" />
+            <div class="spacer layer3"/>
             <section class="bg-[#092100]" id="contact_me">
                 <div class="flex-col text-center">
                     <h1 class="text-3xl font-extrabold text-gray-100">Contact Me!</h1>
@@ -121,18 +106,7 @@ export default function Home(): JSXElement {
                     </a>
                     <br/>
                     <br/>
-                    <SocialButton href="https://github.com/espressodespresso">
-                        <img class="invert-50 sepia-50 hue-rotate-180" src={github} width="30em" alt="github logo"/>
-                    </SocialButton>
-                    <SocialButton href="https://twitter.com/ThatDuds">
-                        <img class="invert-50 sepia-50 hue-rotate-180" src={x} width="30em" alt="twitter logo"/>
-                    </SocialButton>
-                    <SocialButton href="https://www.linkedin.com/in/harry-martel-062151230/">
-                        <img class="invert-50 sepia-50 hue-rotate-180" src={linkedin} width="30em" alt="linkedin logo"/>
-                    </SocialButton>
-                    <SocialButton href="mailto:harry.martel@hotmail.com">
-                        <img class="invert-50 sepia-50 hue-rotate-180" src={mail} width="30em" alt="mail logo"/>
-                    </SocialButton>
+                    <SocialButtonGroup inverted="true" />
                     <br/>
                     <br/>
                 </div>

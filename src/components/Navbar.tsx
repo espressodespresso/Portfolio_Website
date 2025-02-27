@@ -9,10 +9,10 @@ export default function Navbar(): JSXElement {
                 <div class="flex flex-col">
                     <h1 class="text-xl font-bold">Directory</h1>
                     <NavSection header="Homepage" href="/">
-                        <NavLink name="About me" href="#about_me"/>
-                        <NavLink name="Featured" href="#featured"/>
-                        <NavLink name="Experience" href="#experience"/>
-                        <NavLink name="Contact me" href="#contact_me"/>
+                        <NavLink name="About me" href="/#about_me"/>
+                        <NavLink name="Featured" href="/#featured"/>
+                        <NavLink name="Experience" href="/#experience"/>
+                        <NavLink name="Contact me" href="/#contact_me"/>
                     </NavSection>
                     <br/>
                     <NavSection header="Projects">
