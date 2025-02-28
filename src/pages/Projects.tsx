@@ -2,10 +2,11 @@ import {createResource, JSXElement, Show} from "solid-js";
 import {Params, useParams} from "@solidjs/router";
 import Query from "../components/Query.tsx";
 import attendanceURL from "../assets/backgrounds/attendance.png";
-import DynamicBackground from "../components/DynamicBackground.js";
+import DynamicBackground from "../components/dynamic/DynamicBackground.js";
 import Card, {cardTypes} from "../components/Card.js";
 import Tech from "../components/Tech.js";
 import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
+import DynamicSpacer from "../components/dynamic/DynamicSpacer.js";
 
 const fetchProject = async (name: string) => {
     return (await fetch(`http://localhost:4000/projects/${name}`) as Response).json();
@@ -33,39 +34,55 @@ export default function Projects(): JSXElement {
                             <p class="text-sm italic pt-2">↓ Scroll for more information below! ↓</p>
                         </div>
                     </DynamicBackground>
-                    <div class="min-h-10 bg-gradient-to-b from-[#820c3d] to-[#b7154c]" />
-                    <section class="bg-[#b7154c] text-white flex flex-col" id="tech_stack">
-                        <h1 class="text-4xl font-bold">Tech Stack</h1>
-                        <h4 class="pt-1 italic">Full-stack Typescript Approach</h4>
-                        <br/>
-                        <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-4xl">
-                            <Card type={cardTypes.medium}
-                                  title="Client-side"
-                                  disabled_link={true}>
-                                <Tech title="Typescript"/>
-                                <Tech title="Node.js" level="via Browserify"/>
-                                <Tech title="Minification" level="via uglify.js"></Tech>
-                            </Card>
-                            <Card type={cardTypes.medium}
-                                  title="Server-side"
-                                  disabled_link={true}>
-                                <Tech title="Typescript"/>
-                                <Tech title="Hono" level="A Web Framework"/>
-                                <Tech title="Jest" level="A Testing Framework"></Tech>
-                            </Card>
+                    <div class={"min-h-10"}
+                         style={{
+                             background: `linear-gradient(${project()["gradient_color"]}, ${project()["section_color"]})`
+                         }}/>
+                    <div class="text-white">
+                        <section class="flex flex-col"
+                                 id="tech_stack"
+                                 style={{
+                                     background: `${project()["section_color"]}`
+                                 }}>
+                            <h1 class="text-4xl font-bold">Tech Stack</h1>
+                            <h4 class="pt-1 italic">Full-stack Typescript Approach</h4>
+                            <br/>
+                            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-4xl">
+                                <Card type={cardTypes.medium}
+                                      title="Client-side"
+                                      disabled_link={true}>
+                                    <Tech title="Typescript"/>
+                                    <Tech title="Node.js" level="via Browserify"/>
+                                    <Tech title="Minification" level="via uglify.js"></Tech>
+                                </Card>
+                                <Card type={cardTypes.medium}
+                                      title="Server-side"
+                                      disabled_link={true}>
+                                    <Tech title="Typescript"/>
+                                    <Tech title="Hono" level="A Web Framework"/>
+                                    <Tech title="Jest" level="A Testing Framework"></Tech>
+                                </Card>
+                            </div>
+                        </section>
+                        <DynamicSpacer id={project()["id"]}/>
+                        <section class="bg-[#001220] flex flex-col" id="features">
+                            <h1 class="text-4xl font-bold">Features</h1>
+                        </section>
+                        <div class={"spacer projectSpacer2"}/>
+                        <section class="bg-[#2C3A4A]">
+                            <h1 class="text-4xl font-bold">Screenshots</h1>
+                        </section>
+                        <div class={"spacer projectSpacer3"}/>
+                        <section class="bg-[#3B4859]">
+                            <h1 class="text-4xl font-bold">Code</h1>
+                        </section>
+                        <div class="bg-[#3B4859]">
+                            <br/>
+                            <SocialButtonGroup inverted="true"/>
+                            <br/>
+                            <br/>
                         </div>
-                    </section>
-                    <section class="bg-[#960f3a] text-white flex flex-col" id="features">
-                        <h1 class="text-4xl font-bold">Features</h1>
-                    </section>
-                    <section class="bg-[#f0ecee]">
-                        <h1 class="text-4xl font-bold">Screenshots</h1>
-                    </section>
-                    <section>
-                        <h1 class="text-4xl font-bold">Code</h1>
-                    </section>
-                    <br/>
-                    <SocialButtonGroup/>
+                    </div>
                 </div>
             </Show>
         </>

@@ -43,16 +43,16 @@
     background-size: cover;
   }
 
-  .layer1 {
-    background-image: url('./assets/transitions/back1.svg');
+  .homeLayer1 {
+    background-image: url('assets/transitions/homeSpacer1.svg');
   }
 
-  .layer2 {
-    background-image: url('./assets/transitions/back2.svg');
+  .homeLayer2 {
+    background-image: url('assets/transitions/homeSpacer2.svg');
   }
 
-  .layer3 {
-    background-image: url('./assets/transitions/back3.svg');
+  .homeLayer3 {
+    background-image: url('assets/transitions/homeSpacer3.svg');
   }
 
   .tech {
@@ -91,12 +91,24 @@ h3 {
   font-weight: bold;
 }
 
-@layer pages {
+@layer projects {
   #project_name {
     min-height: 100vh !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+
+  .attendanceSpacer {
+    background-image: url('assets/transitions/attendance/attendanceSpacer1.svg');
+  }
+
+  .projectSpacer2 {
+    background-image: url('assets/transitions/attendance/attendanceSpacer2.svg');
+  }
+
+  .projectSpacer3 {
+    background-image: url('assets/transitions/attendance/attendanceSpacer3.svg');
   }
 
 }

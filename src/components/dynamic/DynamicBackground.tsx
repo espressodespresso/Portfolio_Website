@@ -1,5 +1,5 @@
 import {JSXElement, Match, Switch} from "solid-js";
-import attendanceURL from "../assets/backgrounds/attendance.png";
+import attendanceURL from "../../assets/backgrounds/attendance.png";
 
 /*const options = {
     attendance: attendanceURL,
@@ -26,3 +26,5 @@ export default function DynamicBackground(props: any): JSXElement {
         </Switch>
     )
 }
+
+// spacerType name

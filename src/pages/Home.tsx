@@ -28,7 +28,7 @@ export default function Home(): JSXElement {
                     <SocialButtonGroup />
                 </div>
             </section>
-            <div class="spacer layer1"/>
+            <div class="spacer homeLayer1"/>
             <section class="bg-[#93f673]" id="featured">
                 <div class="flex-col text-center">
                     <h1 class="text-3xl font-bold">Featured Projects</h1>
@@ -36,23 +36,26 @@ export default function Home(): JSXElement {
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <Card title="Attendance System"
                               description="Third Year University Project which tracks and takes attendance for universites"
-                              type={cardTypes.small}>
+                              type={cardTypes.small}
+                              href="/project/attendance">
                             <img src={ts} width="40em" alt="typescript logo"/>
                         </Card>
                         <Card title="Snake Game"
                               description="Personal Project recreating snake within the Rust Terminal"
-                              type={cardTypes.small}>
+                              type={cardTypes.small}
+                              href="/project/snake">
                             <img src={rust} width="40em" alt="rust logo" class="hover:animate-spin"/>
                         </Card>
                         <Card title="Tetris Game"
                               description="Second Year University Project which recreates Tetris within the C# Terminal"
-                              type={cardTypes.small}>
-                        <img src={csharp} width="40em" alt="c-sharp logo"/>
+                              type={cardTypes.small}
+                              href="/project/tetris">
+                            <img src={csharp} width="40em" alt="c-sharp logo"/>
                         </Card>
                     </div>
                 </div>
             </section>
-            <div class="spacer layer2" />
+            <div class="spacer homeLayer2" />
             <section class="bg-[#024b00] pb-10" id="experience">
                 <div class="flex-col text-center">
                     <h1 class="text-3xl font-extrabold text-gray-50">Regarding Experience</h1>
@@ -83,7 +86,7 @@ export default function Home(): JSXElement {
                     </div>
                 </div>
             </section>
-            <div class="spacer layer3"/>
+            <div class="spacer homeLayer3"/>
             <section class="bg-[#092100]" id="contact_me">
                 <div class="flex-col text-center">
                     <h1 class="text-3xl font-extrabold text-gray-100">Contact Me!</h1>

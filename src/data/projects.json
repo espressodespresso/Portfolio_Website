@@ -7,8 +7,8 @@
       "img_alt": "typescript logo",
       "description": "Final Year Undergraduate University Project",
       "date_of_completion": "12/12/12",
-      "img": "",
-      "url": ""
+      "section_color": "#b7154c",
+      "gradient_color": "#820c3d"
     },
     {
       "id": "snake",
