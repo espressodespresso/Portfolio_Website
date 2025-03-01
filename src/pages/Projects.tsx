@@ -1,4 +1,4 @@
-import {createResource, JSXElement, Show} from "solid-js";
+import {createEffect, createResource, For, JSXElement, onMount, Show} from "solid-js";
 import {Params, useParams} from "@solidjs/router";
 import Query from "../components/Query.tsx";
 import attendanceURL from "../assets/backgrounds/attendance.png";
@@ -7,7 +7,7 @@ import Card, {cardTypes} from "../components/Card.js";
 import Tech from "../components/Tech.js";
 import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
 import DynamicSpacer from "../components/dynamic/DynamicSpacer.js";
-
+import FeaturesCard from "../components/FeaturesCard.js";
 const fetchProject = async (name: string) => {
     return (await fetch(`http://localhost:4000/projects/${name}`) as Response).json();
 }
@@ -47,7 +47,7 @@ export default function Projects(): JSXElement {
                             <h1 class="text-4xl font-bold">Tech Stack</h1>
                             <h4 class="pt-1 italic">Full-stack Typescript Approach</h4>
                             <br/>
-                            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-4xl">
+                            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-4xl ">
                                 <Card type={cardTypes.medium}
                                       title="Client-side"
                                       disabled_link={true}>
@@ -67,10 +67,22 @@ export default function Projects(): JSXElement {
                         <DynamicSpacer id={project()["id"]}/>
                         <section class="bg-[#001220] flex flex-col" id="features">
                             <h1 class="text-4xl font-bold">Features</h1>
+                            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-2xl max-w-5xl text-gray-200 pt-4">
+                                <For each={project()["features"]}>
+                                    {(object) => <FeaturesCard emoji={object["emoji"]}
+                                                               title={object["title"]}
+                                                               description={object["description"]}/>}
+                                </For>
+                            </div>
                         </section>
                         <div class={"spacer projectSpacer2"}/>
                         <section class="bg-[#2C3A4A]">
                             <h1 class="text-4xl font-bold">Screenshots</h1>
+                            <div id="slider" class="grid grid-col-3">
+                                <For each={project()["slider_images"]}>
+                                    {(object) => <img src={object} class="w-20 h-16" />}
+                                </For>
+                            </div>
                         </section>
                         <div class={"spacer projectSpacer3"}/>
                         <section class="bg-[#3B4859]">

@@ -8,7 +8,45 @@
       "description": "Final Year Undergraduate University Project",
       "date_of_completion": "12/12/12",
       "section_color": "#b7154c",
-      "gradient_color": "#820c3d"
+      "gradient_color": "#820c3d",
+      "features": [
+        {
+          "emoji": "✅",
+          "title": "Ease of Use",
+          "description": "Attendance is taken for classes using either a QR-Code or a Code off a student's device."
+        },
+        {
+          "emoji": "\uD83D\uDE80",
+          "title": "Performant",
+          "description": "Application's API utilising a combination of MongoDB & Hono leading to overall high performance queries."
+        },
+        {
+          "emoji": "\uD83D\uDEE0",
+          "title": "Personalise",
+          "description": "CRUD Tools available within the application for administrators and individuals with access control authority."
+        },
+        {
+          "emoji": "\uD83E\uDD13",
+          "title": "Analytics",
+          "description": "Analytical features for all access control authority levels to showcase deep analysis of attendance etc."
+        },
+        {
+          "emoji": "\uD83D\uDCF1",
+          "title": "Mobile UI",
+          "description": "Built from the ground up with mobile support in mind as mobile devices would be used most for the website."
+        },
+        {
+          "emoji": "\uD83C\uDFED",
+          "title": "Codebase",
+          "description": "Codebase was designed with good OOP principles as well as relevant design patterns."
+        }
+      ],
+      "slider_images": [
+        "../src/assets/slider/attendance/image1.png",
+        "../src/assets/slider/attendance/image2.png",
+        "../src/assets/slider/attendance/image3.png",
+        "../src/assets/slider/attendance/image4.png"
+      ]
     },
     {
       "id": "snake",
