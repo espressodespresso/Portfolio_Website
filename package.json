@@ -22,6 +22,7 @@
     "flowbite": "^3.1.2",
     "postcss": "^8.5.3",
     "solid-js": "^1.9.3",
+    "solid-prevent-scroll": "^0.1.10",
     "tailwindcss": "^4.0.8"
   }
 }

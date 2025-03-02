@@ -1,4 +1,4 @@
-import {createEffect, createResource, For, JSXElement, onMount, Show} from "solid-js";
+import {createEffect, createSignal, createResource, For, JSXElement, onMount, Show} from "solid-js";
 import {Params, useParams} from "@solidjs/router";
 import Query from "../components/Query.tsx";
 import attendanceURL from "../assets/backgrounds/attendance.png";
@@ -8,6 +8,7 @@ import Tech from "../components/Tech.js";
 import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
 import DynamicSpacer from "../components/dynamic/DynamicSpacer.js";
 import FeaturesCard from "../components/FeaturesCard.js";
+import createPreventScroll from "solid-prevent-scroll";
 const fetchProject = async (name: string) => {
     return (await fetch(`http://localhost:4000/projects/${name}`) as Response).json();
 }
@@ -21,6 +22,43 @@ const Attendance = () => <section></section>
 export default function Projects(): JSXElement {
     const params: Params = useParams();
     const [project] = createResource(params.name, fetchProject);
+    const [scrollActive, setScrollActive] = createSignal(false);
+
+    let scrollContainer: HTMLDivElement | undefined;
+    let enlargedImageElement: HTMLImageElement | undefined;
+    let enlargedImageContainer: HTMLDivElement | undefined;
+
+    const scrollRight = () => {
+        if (scrollContainer) {
+            const imgWidth = scrollContainer.querySelector("img")?.clientWidth || 0;
+            scrollContainer.scrollBy({ left: imgWidth});
+        }
+    };
+
+    const scrollLeft = () => {
+        if (scrollContainer) {
+            const imgWidth = scrollContainer.querySelector("img")?.clientWidth || 0;
+            scrollContainer.scrollBy({ left: -imgWidth});
+        }
+    };
+
+    const toggleEnlargeImage = (event: MouseEvent) => {
+        if (enlargedImageContainer && enlargedImageElement) {
+            enlargedImageContainer.classList.toggle("hidden");
+            const imageElement: HTMLImageElement = event.currentTarget as HTMLImageElement;
+            enlargedImageElement.src = imageElement.src;
+            if(enlargedImageContainer.classList.contains("hidden")) {
+                setScrollActive(false);
+            } else {
+                setScrollActive(true);
+            }
+        }
+    }
+
+    createPreventScroll({
+        element: enlargedImageContainer,
+        enabled: scrollActive
+    })
 
     return (
         <>
@@ -76,12 +114,29 @@ export default function Projects(): JSXElement {
                             </div>
                         </section>
                         <div class={"spacer projectSpacer2"}/>
-                        <section class="bg-[#2C3A4A]">
-                            <h1 class="text-4xl font-bold">Screenshots</h1>
-                            <div id="slider" class="grid grid-col-3">
-                                <For each={project()["slider_images"]}>
-                                    {(object) => <img src={object} class="w-20 h-16" />}
-                                </For>
+                        <section class="bg-[#2C3A4A] flex flex-col">
+                            <h1 class="text-4xl font-bold pb-4">Screenshots</h1>
+                            <div class="flex flex-row bg-gray-700 rounded-3xl">
+                                <button type="button" onClick={scrollLeft}>
+                                    <svg width="32" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                         clip-rule="evenodd" fill="white" fill-opacity="0.8">
+                                        <path d="M28 2v4l-12 6 12 6v4l-16-10 16-10z"/>
+                                    </svg>
+                                </button>
+                                <div class="p-4 max-w-300">
+                                    <div id="slider" class="flex flex-row overflow-scroll scroll-smooth" ref={scrollContainer}>
+                                        <For each={project()["slider_images"]}>
+                                            {(object) =>
+                                                <img src={object} onClick={toggleEnlargeImage} class="w-140 h-auto p-2"/>}
+                                        </For>
+                                    </div>
+                                </div>
+                                <button type="button" onClick={scrollRight}>
+                                    <svg width="32" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                         clip-rule="evenodd" fill="white" fill-opacity="0.8">
+                                        <path d="M4 2l16 10-16 10v-4l12-6-12-6V2z"/>
+                                    </svg>
+                                </button>
                             </div>
                         </section>
                         <div class={"spacer projectSpacer3"}/>
@@ -95,6 +150,17 @@ export default function Projects(): JSXElement {
                             <br/>
                         </div>
                     </div>
+                </div>
+                <div ref={enlargedImageContainer} class="fixed w-full h-full left-0 top-0 grid place-items-center hidden">
+                    <div class="absolute inset-0 backdrop-blur-lg"/>
+                    <img src={""} ref={enlargedImageElement} class="w-210 h-auto relative z-10"/>
+                    <button class="absolute top-0 right-0 p-5" onClick={toggleEnlargeImage}>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" fill="white"
+                             viewBox="0 0 50 50">
+                            <path
+                                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+                        </svg>
+                    </button>
                 </div>
             </Show>
         </>

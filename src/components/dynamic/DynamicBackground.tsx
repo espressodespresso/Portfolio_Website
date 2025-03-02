@@ -26,5 +26,3 @@ export default function DynamicBackground(props: any): JSXElement {
         </Switch>
     )
 }
-
-// spacerType name
