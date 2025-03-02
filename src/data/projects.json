@@ -46,7 +46,9 @@
         "../src/assets/slider/attendance/image2.png",
         "../src/assets/slider/attendance/image3.png",
         "../src/assets/slider/attendance/image4.png"
-      ]
+      ],
+      "github_readme": "https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fespressodespresso%2FAttendance_System%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on",
+      "github_project": "https://github.com/espressodespresso/Attendance_System/tree/master"
     },
     {
       "id": "snake",
