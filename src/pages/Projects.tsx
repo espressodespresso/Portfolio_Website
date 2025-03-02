@@ -138,7 +138,7 @@ export default function Projects(): JSXElement {
                             </div>
                         </section>
                         <div class={"spacer projectSpacer2"}/>
-                        <section class="bg-[#2C3A4A] flex flex-col">
+                        <section class="bg-[#2C3A4A] flex flex-col" id="screenshots">
                             <h1 class="text-4xl font-bold">Screenshots</h1>
                             <h4 class="pt-1 italic pb-4">Click on an image to enlarge it...</h4>
                             <div class="flex flex-row bg-gray-700 rounded-3xl">
@@ -182,7 +182,7 @@ export default function Projects(): JSXElement {
                             </div>
                         </section>
                         <div class={"spacer projectSpacer3"}/>
-                        <section class="bg-[#3B4859] flex flex-col">
+                        <section class="bg-[#3B4859] flex flex-col" id="github">
                             <h1 class="text-4xl font-bold">Github</h1>
                             <h4 class="pt-1 italic">Links to relevant Github repositories...</h4>
                             <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-5">

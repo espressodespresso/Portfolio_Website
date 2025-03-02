@@ -1,6 +1,25 @@
-import {JSXElement} from "solid-js";
+import {createEffect, createResource, createSignal, JSXElement, onMount, Show} from "solid-js";
 import NavSection from "./nav/NavSection.tsx";
 import NavLink from "./nav/NavLink.tsx";
+import NavSubLinks from "./nav/NavSubLinks.js";
+import NavSubSection from "./nav/NavSubSection.js";
+
+const [showSubSection, setShowSubSection] = createSignal(false);
+const [currentSubSection, setCurrentSubSection] = createSignal("");
+
+createEffect(() => {
+    const handleSubSection = () => {
+        if(!window.location.pathname.includes("project")) {
+            setShowSubSection(false);
+        }
+    }
+
+    window.addEventListener("click", handleSubSection);
+
+    return () => {
+        window.removeEventListener("click", handleSubSection);
+    }
+})
 
 export default function Navbar(): JSXElement {
     return (
@@ -16,10 +35,30 @@ export default function Navbar(): JSXElement {
                     </NavSection>
                     <br/>
                     <NavSection header="Projects">
-                        <NavLink name="Attendance (TS)" href="/project/attendance"/>
-                        <NavLink name="Snake (Rust)" href="/project/snake"/>
-                        <NavLink name="Tetris (C#)" href="/project/tetris"/>
-                        <NavLink name="Messaging (Java)" href="/project/messaging"/>
+                        <NavSubSection setShowSubSection={setShowSubSection}
+                                       setCurrentSubSection={setCurrentSubSection}
+                                       currentSubSection={currentSubSection}
+                                       showSubSection={showSubSection}
+                                       id="attendance"
+                                       nav_name="Attendance (TS)"/>
+                        <NavSubSection setShowSubSection={setShowSubSection}
+                                       setCurrentSubSection={setCurrentSubSection}
+                                       currentSubSection={currentSubSection}
+                                       showSubSection={showSubSection}
+                                       id="snake"
+                                       nav_name="Snake (Rust)"/>
+                        <NavSubSection setShowSubSection={setShowSubSection}
+                                       setCurrentSubSection={setCurrentSubSection}
+                                       currentSubSection={currentSubSection}
+                                       showSubSection={showSubSection}
+                                       id="tetris"
+                                       nav_name="Tetris (C#)"/>
+                        <NavSubSection setShowSubSection={setShowSubSection}
+                                       setCurrentSubSection={setCurrentSubSection}
+                                       currentSubSection={currentSubSection}
+                                       showSubSection={showSubSection}
+                                       id="messaging"
+                                       nav_name="Messaging (Java)"/>
                     </NavSection>
                     <br/>
                     <NavSection header="Contact Me">
