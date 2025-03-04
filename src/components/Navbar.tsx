@@ -45,8 +45,8 @@ export default function Navbar(): JSXElement {
                                        setCurrentSubSection={setCurrentSubSection}
                                        currentSubSection={currentSubSection}
                                        showSubSection={showSubSection}
-                                       id="snake"
-                                       nav_name="Snake (Rust)"/>
+                                       id="bank_api"
+                                       nav_name="Bank API (C#)"/>
                         <NavSubSection setShowSubSection={setShowSubSection}
                                        setCurrentSubSection={setCurrentSubSection}
                                        currentSubSection={currentSubSection}

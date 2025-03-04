@@ -99,8 +99,16 @@ h3 {
     background-position: center center;
   }
 
+  #project_name h1, h3 {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
+  }
+
   .attendanceSpacer {
     background-image: url('assets/transitions/attendance/attendanceSpacer1.svg');
+  }
+
+  .tetrisSpacer, .messagingSpacer, .bank_apiSpacer {
+    background-image: url('assets/transitions/others/othersSpacer1.svg');
   }
 
   .projectSpacer2 {

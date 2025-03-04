@@ -6,7 +6,7 @@ export default function FeaturesCard(props: any): JSXElement {
             {props.emoji}
             <h3 class="text-xl font-bold min-w-31">{props.title}</h3>
             -
-            <p class="text-left pl-2">{props.description}</p>
+            <p class="text-left pl-2 sm:max-w-80">{props.description}</p>
         </div>
     )
 }

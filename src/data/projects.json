@@ -3,6 +3,7 @@
     {
       "id": "attendance",
       "name": "Attendance System",
+      "title_color": "text-black",
       "language": "Typescript",
       "img_alt": "typescript logo",
       "description": "Final Year Undergraduate University Project",
@@ -41,111 +42,189 @@
           "description": "Codebase was designed with good OOP principles as well as relevant design patterns."
         }
       ],
+      "tech_stack": [
+        {
+          "title": "Client-side",
+          "techs": [
+            {
+              "title": "Typescript"
+            },
+            {
+              "title": "Node.js",
+              "level": "via Browserify"
+            },
+            {
+              "title": "Minification",
+              "level": "via uglify.js"
+            }
+          ]
+        },
+        {
+          "title": "Server-side",
+          "techs": [
+            {
+              "title": "Typescript"
+            },
+            {
+              "title": "Hono",
+              "level": "A Web Framework"
+            },
+            {
+              "title": "Jest",
+              "level": "A Testing Framework"
+            }
+          ]
+        }
+      ],
       "slider_images": [
-        "../src/assets/slider/attendance/image1.png",
-        "../src/assets/slider/attendance/image2.png",
-        "../src/assets/slider/attendance/image3.png",
-        "../src/assets/slider/attendance/image4.png"
+        "../src/assets/slider/attendance/image1.avif",
+        "../src/assets/slider/attendance/image2.avif",
+        "../src/assets/slider/attendance/image3.avif",
+        "../src/assets/slider/attendance/image4.avif",
+        "../src/assets/slider/attendance/image5.avif",
+        "../src/assets/slider/attendance/image6.avif",
+        "../src/assets/slider/attendance/image7.avif",
+        "../src/assets/slider/attendance/image8.avif"
       ],
       "github_readme": "https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fespressodespresso%2FAttendance_System%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on",
       "github_project": "https://github.com/espressodespresso/Attendance_System/tree/master"
     },
     {
-      "id": "snake",
-      "name": "Snake Game",
-      "language": "Rust",
-      "img_alt": "rust logo",
-      "description": "Personal project creating a rendition of the original snake game",
+      "id": "bank_api",
+      "name": "Bank API",
+      "title_color": "text-white",
+      "language": "C-sharp",
+      "img_alt": "c-sharp logo",
+      "description": "Built for a group university project replicating a banking system",
       "date_of_completion": "12/12/12",
-      "section_color": "#b7154c",
-      "gradient_color": "#820c3d",
+      "section_color": "#0b0d1c",
+      "gradient_color": "#0d1117",
       "features": [
         {
-          "emoji": "✅",
-          "title": "Ease of Use",
-          "description": "Attendance is taken for classes using either a QR-Code or a Code off a student's device."
+          "emoji": "⚙\uFE0F",
+          "title": "ASP.NET",
+          "description": "Demonstrates my ability to effectively build APIs using ASP.NET Web API, highlighting backend development skills."
+        },
+        {
+          "emoji": "\uD83E\uDDF1",
+          "title": "Structured",
+          "description": "Project is structered with distinct folders for each such as Models, reflecting a organised codebase enhancing maintainability."
+        },
+        {
+          "emoji": "\uD83D\uDCBB",
+          "title": "X-Platform",
+          "description": "Instructions provided for local usage on multiple platforms as different settings are required for each."
+        },
+        {
+          "emoji": "\uD83D\uDCF0",
+          "title": "Instructions",
+          "description": "Detailed instructions on how to setup the project as well as what each endpoint of the API does."
+        },
+        {
+          "emoji": "\uD83D\uDD10",
+          "title": "Secure",
+          "description": "HTTPS is built-in to the APIs operation to ensure no snooping or other penetration methods are avoided."
         },
         {
           "emoji": "\uD83D\uDE80",
-          "title": "Performant",
-          "description": "Application's API utilising a combination of MongoDB & Hono leading to overall high performance queries."
-        },
+          "title": "Async",
+          "description": "Built with scalability and responsiveness in mind to ensure the ability of rapid expandability."
+        }
+      ],
+      "tech_stack": [
         {
-          "emoji": "\uD83D\uDEE0",
-          "title": "Personalise",
-          "description": "CRUD Tools available within the application for administrators and individuals with access control authority."
-        },
-        {
-          "emoji": "\uD83E\uDD13",
-          "title": "Analytics",
-          "description": "Analytical features for all access control authority levels to showcase deep analysis of attendance etc."
-        },
-        {
-          "emoji": "\uD83D\uDCF1",
-          "title": "Mobile UI",
-          "description": "Built from the ground up with mobile support in mind as mobile devices would be used most for the website."
-        },
-        {
-          "emoji": "\uD83C\uDFED",
-          "title": "Codebase",
-          "description": "Codebase was designed with good OOP principles as well as relevant design patterns."
+          "title": "Server-side",
+          "techs": [
+            {
+              "title": "C-Sharp"
+            },
+            {
+              "title": "ASP.NET",
+              "level": "Web API Type"
+            },
+            {
+              "title": "MongoDB",
+              "level": "A Document-orientated Database"
+            }
+          ]
         }
       ],
       "slider_images": [
-        "../src/assets/slider/attendance/image1.png",
-        "../src/assets/slider/attendance/image2.png",
-        "../src/assets/slider/attendance/image3.png",
-        "../src/assets/slider/attendance/image4.png"
+        "../src/assets/slider/bank_api/image1.avif",
+        "../src/assets/slider/bank_api/image2.avif",
+        "../src/assets/slider/bank_api/image3.avif",
+        "../src/assets/slider/bank_api/image4.avif"
       ],
-      "github_readme": "https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fespressodespresso%2FMessaging%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on",
-      "github_project": "https://github.com/espressodespresso/Messaging/tree/master"
+      "github_readme": "https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fespressodespresso%2FBankAPI%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on",
+      "github_project": "https://github.com/espressodespresso/BankAPI"
     },
     {
       "id": "tetris",
       "name": "Tetris Game",
+      "title_color": "text-white",
       "language": "C-Sharp",
       "img_alt": "c-sharp logo",
       "description": "Second year university project utilising c-sharp",
       "date_of_completion": "12/12/12",
-      "section_color": "#b7154c",
-      "gradient_color": "#820c3d",
+      "section_color": "#0b0d1c",
+      "gradient_color": "#1f202a",
       "features": [
         {
-          "emoji": "✅",
-          "title": "Ease of Use",
-          "description": "Attendance is taken for classes using either a QR-Code or a Code off a student's device."
+          "emoji": "\uD83D\uDD79\uFE0F",
+          "title": "Console",
+          "description": "Built with-in the console, providing a test-based gaming experience to the user."
         },
         {
-          "emoji": "\uD83D\uDE80",
-          "title": "Performant",
-          "description": "Application's API utilising a combination of MongoDB & Hono leading to overall high performance queries."
+          "emoji": "\uD83D\uDC63",
+          "title": "Tracking",
+          "description": "Implementation of a scoring system to keep track of the users performance, enhancing competitiveness."
         },
         {
-          "emoji": "\uD83D\uDEE0",
-          "title": "Personalise",
-          "description": "CRUD Tools available within the application for administrators and individuals with access control authority."
+          "emoji": "\uD83D\uDCA5",
+          "title": "Collisions",
+          "description": "Object collision detection ensures accurate piece placement and game mechanics alike the original."
         },
         {
-          "emoji": "\uD83E\uDD13",
-          "title": "Analytics",
-          "description": "Analytical features for all access control authority levels to showcase deep analysis of attendance etc."
+          "emoji": "\uD83E\uDDF1",
+          "title": "Boundaries",
+          "description": "Developed out-of-bounds detection to prevent pieces from moving beyond the playable area, maintaining game integrity."
         },
         {
-          "emoji": "\uD83D\uDCF1",
-          "title": "Mobile UI",
-          "description": "Built from the ground up with mobile support in mind as mobile devices would be used most for the website."
+          "emoji": "⌨\uFE0F",
+          "title": "C-Sharp",
+          "description": "Utilized C# to develop the game, demonstrating a strong background within this programming language."
         },
         {
-          "emoji": "\uD83C\uDFED",
-          "title": "Codebase",
-          "description": "Codebase was designed with good OOP principles as well as relevant design patterns."
+          "emoji": "\uD83C\uDF93",
+          "title": "Uni-Project",
+          "description": "Developed as part of my second-year assignment, reflecting academic growth and application of new concepts learnt."
+        }
+      ],
+      "tech_stack": [
+        {
+          "title": "Client-side",
+          "techs": [
+            {
+              "title": "C-Sharp"
+            },
+            {
+              "title": "Console-Based",
+              "level": "Rendered via Terminal"
+            },
+            {
+              "title": "Mono/.NET Framework",
+              "level": "Runs on Windows & Linux Systems"
+            }
+          ]
         }
       ],
       "slider_images": [
-        "../src/assets/slider/attendance/image1.png",
-        "../src/assets/slider/attendance/image2.png",
-        "../src/assets/slider/attendance/image3.png",
-        "../src/assets/slider/attendance/image4.png"
+        "../src/assets/slider/tetris/image1.avif",
+        "../src/assets/slider/tetris/image2.avif",
+        "../src/assets/slider/tetris/image3.avif",
+        "../src/assets/slider/tetris/image4.avif",
+        "../src/assets/slider/tetris/image5.avif",
+        "../src/assets/slider/tetris/image6.avif"
       ],
       "github_readme": "https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fespressodespresso%2FTetris%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on",
       "github_project": "https://github.com/espressodespresso/Tetris/tree/master"
@@ -153,49 +232,85 @@
     {
       "id": "messaging",
       "name": "Messaging App",
+      "title_color": "text-white",
       "language": "Java",
       "img_alt": "java logo",
       "description": "Second Year Undergraduate University Project for the Java Course",
       "date_of_completion": "12/12/12",
-      "section_color": "#b7154c",
-      "gradient_color": "#820c3d",
+      "section_color": "#0b0d1c",
+      "gradient_color": "#0d1117",
       "features": [
         {
+          "emoji": "⚙\uFE0F",
+          "title": "Interleaved",
+          "description": "The application utilizes a multithreaded approach to handle multiple clients simultaneously, ensuring efficient and responsive communication."
+        },
+        {
+          "emoji": "\uD83D\uDC82",
+          "title": "Protocol",
+          "description": "Implements the Publish/Subscribe messaging pattern, facilitating structured and readable data exchange with the use of the JSON format."
+        },
+        {
+          "emoji": "\uD83D\uDCA1",
+          "title": "Dynamic",
+          "description": "Users can manage their subscriptions dynamically with commands to list available channels, subscribe, unsubscribe and view current subscriptions."
+        },
+        {
           "emoji": "✅",
-          "title": "Ease of Use",
-          "description": "Attendance is taken for classes using either a QR-Code or a Code off a student's device."
+          "title": "Selection",
+          "description": "Active Channel Selection provides the functionality to select and display the active communication channel, allowing users to focus their interactions."
         },
         {
-          "emoji": "\uD83D\uDE80",
-          "title": "Performant",
-          "description": "Application's API utilising a combination of MongoDB & Hono leading to overall high performance queries."
+          "emoji": "\uD83D\uDD0D",
+          "title": "Searching",
+          "description": "Users can retrieve all messages they've published and search for specific keywords within subscribed channels, enhancing management capabilities."
         },
         {
-          "emoji": "\uD83D\uDEE0",
-          "title": "Personalise",
-          "description": "CRUD Tools available within the application for administrators and individuals with access control authority."
+          "emoji": "⌨\uFE0F",
+          "title": "Menu",
+          "description": "Offers a command menu that displayed all available commands, improving user experience by providing accessible guidance on application functionalities."
+        }
+      ],
+      "tech_stack": [
+        {
+          "title": "Client-side",
+          "techs": [
+            {
+              "title": "Java"
+            },
+            {
+              "title": "Console-Based",
+              "level": "Rendered via Terminal"
+            },
+            {
+              "title": "JSON Processing",
+              "level": "via the Google Gson Library"
+            }
+          ]
         },
         {
-          "emoji": "\uD83E\uDD13",
-          "title": "Analytics",
-          "description": "Analytical features for all access control authority levels to showcase deep analysis of attendance etc."
-        },
-        {
-          "emoji": "\uD83D\uDCF1",
-          "title": "Mobile UI",
-          "description": "Built from the ground up with mobile support in mind as mobile devices would be used most for the website."
-        },
-        {
-          "emoji": "\uD83C\uDFED",
-          "title": "Codebase",
-          "description": "Codebase was designed with good OOP principles as well as relevant design patterns."
+          "title": "Server-side",
+          "techs": [
+            {
+              "title": "Java"
+            },
+            {
+              "title": "Multithreading",
+              "level": "via Java's Threading"
+            },
+            {
+              "title": "Sockets",
+              "level": "via Java's TCP-based communication"
+            }
+          ]
         }
       ],
       "slider_images": [
-        "../src/assets/slider/attendance/image1.png",
-        "../src/assets/slider/attendance/image2.png",
-        "../src/assets/slider/attendance/image3.png",
-        "../src/assets/slider/attendance/image4.png"
+        "../src/assets/slider/messaging/image1.avif",
+        "../src/assets/slider/messaging/image2.avif",
+        "../src/assets/slider/messaging/image3.avif",
+        "../src/assets/slider/messaging/image4.avif",
+        "../src/assets/slider/messaging/image5.avif"
       ],
       "github_readme": "https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fespressodespresso%2FMessaging%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on",
       "github_project": "https://github.com/espressodespresso/Messaging/tree/master"

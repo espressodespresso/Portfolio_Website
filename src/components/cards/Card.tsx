@@ -8,7 +8,7 @@ export const cardTypes = {
 
 export default function Card(props: any): JSXElement {
     return (
-        <div class={props.type}>
+        <div class={props.type + "sm:min-w-100 md:min-w-110 lg:min-w-115"}>
             {props.children}
             <h5 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">{props.title}</h5>
             <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">{props.description}</p>

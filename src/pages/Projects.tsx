@@ -92,7 +92,7 @@ export default function Projects(): JSXElement {
             {project() ? (
                 <Layout>
                     <div class="flex-col text-center">
-                        <DynamicBackground id={project()!["id"]}>
+                        <DynamicBackground class={project()!["title_color"]} id={project()!["id"]}>
                             <div class="absolute inset-0 backdrop-blur-sm"/>
                             <div class="relative z-10 flex flex-col items-center justify-center">
                                 <h1 class="text-6xl font-bold">{project()!["name"]}</h1>
@@ -113,28 +113,24 @@ export default function Projects(): JSXElement {
                                 <h1 class="text-4xl font-bold">Tech Stack</h1>
                                 <h4 class="pt-1 italic">Full-stack Typescript Approach</h4>
                                 <br/>
-                                <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-4xl ">
-                                    <Card type={cardTypes.medium}
-                                          title="Client-side"
-                                          disabled_link={true}>
-                                        <Tech title="Typescript"/>
-                                        <Tech title="Node.js" level="via Browserify"/>
-                                        <Tech title="Minification" level="via uglify.js"></Tech>
-                                    </Card>
-                                    <Card type={cardTypes.medium}
-                                          title="Server-side"
-                                          disabled_link={true}>
-                                        <Tech title="Typescript"/>
-                                        <Tech title="Hono" level="A Web Framework"/>
-                                        <Tech title="Jest" level="A Testing Framework"></Tech>
-                                    </Card>
+                                <div class={`grid ${(project()!["tech_stack"] as object[]).length === 1 ? "grid-cols-1" 
+                                    : "sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"} place-items-center min-w-4xl`}>
+                                    <For each={project()!["tech_stack"]}>
+                                        {(object) => <Card type={cardTypes.medium}
+                                                           title={object["title"]}
+                                                           disabled_link={true}>
+                                            <For each={object["techs"]}>
+                                                {(tech) => <Tech title={tech["title"]}
+                                                                 level={tech["level"]}/>}
+                                            </For>
+                                        </Card>}
+                                    </For>
                                 </div>
                             </section>
                             <DynamicSpacer id={project()!["id"]}/>
                             <section class="bg-[#001220] flex flex-col" id="features">
                                 <h1 class="text-4xl font-bold">Features</h1>
-                                <div
-                                    class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-2xl max-w-5xl text-gray-200 pt-4">
+                                <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 max-w-5xl text-gray-200 pt-4">
                                     <For each={project()!["features"]}>
                                         {(object) => <FeaturesCard emoji={object["emoji"]}
                                                                    title={object["title"]}
@@ -194,14 +190,14 @@ export default function Projects(): JSXElement {
                                     <a type="button"
                                        class="border-gray-500 bg-gray-300
                                  text-black border-solid rounded-xl border-2 font-bold
-                                  text-sm pl-10 pr-10 pt-4 pb-4 opacity-85 mr-2 ease-in-out
-                                  hover:scale-110"
+                                  text-sm pt-4 pb-4 opacity-85 sm:mr-0 md:mr-2 lg:mr-2 ease-in-out
+                                  hover:scale-110 w-60"
                                        onClick={toggleEnlargeIFrame}>Open README.md</a>
                                     <a type="button"
                                        class="border-gray-500 bg-gray-300
                                  text-black border-solid rounded-xl border-2 font-bold
-                                  text-sm pl-10 pr-10 pt-4 pb-4 opacity-85 ml-2 ease-in-out
-                                  hover:scale-110"
+                                  text-sm  pt-4 pb-4 opacity-85 sm:ml-0 md:ml-2 lg:ml-2 ease-in-out
+                                  hover:scale-110 w-60"
                                        href={project()!["github_project"]}
                                        target="_blank">Open Project</a>
                                 </div>
@@ -233,7 +229,8 @@ export default function Projects(): JSXElement {
                                  fill="white"
                                  viewBox="0 0 50 50">
                                 <path
-                                    d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+                                    d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875
+                                    42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
                             </svg>
                         </button>
                     </div>

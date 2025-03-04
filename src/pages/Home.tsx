@@ -2,7 +2,7 @@ import {JSXElement} from "solid-js";
 import Card, {cardTypes} from "../components/cards/Card.tsx";
 import Tech from "../components/Tech.tsx";
 
-import img from "../assets/icons/test.jpeg";
+import img from "../assets/icons/avatar.avif";
 import ts from "../assets/icons/ts.svg";
 import rust from "../assets/icons/rust.svg";
 import csharp from "../assets/icons/csharp.svg";
@@ -41,19 +41,19 @@ export default function Home(): JSXElement {
                               description="Third Year University Project which tracks and takes attendance for universites"
                               type={cardTypes.small}
                               href="/project/attendance">
-                            <img src={ts} width="40em" alt="typescript logo"/>
+                            <img src={ts} width="40em" alt="typescript logo" class="hover:animate-pulse"/>
                         </Card>
-                        <Card title="Snake Game"
-                              description="Personal Project recreating snake within the Rust Terminal"
+                        <Card title="Bank API"
+                              description="Built for a group university project replicating a banking system"
                               type={cardTypes.small}
-                              href="/project/snake">
-                            <img src={rust} width="40em" alt="rust logo" class="hover:animate-spin"/>
+                              href="/project/bank_api">
+                            <img src={csharp} width="40em" alt="c-sharp logo" class="hover:animate-pulse"/>
                         </Card>
                         <Card title="Tetris Game"
                               description="Second Year University Project which recreates Tetris within the C# Terminal"
                               type={cardTypes.small}
                               href="/project/tetris">
-                            <img src={csharp} width="40em" alt="c-sharp logo"/>
+                            <img src={csharp} width="40em" alt="c-sharp logo" class="hover:animate-pulse"/>
                         </Card>
                     </div>
                 </div>
