@@ -62,9 +62,9 @@ export default function Navbar(): JSXElement {
                     </NavSection>
                     <br/>
                     <NavSection header="Contact Me">
-                        <NavLink name="X (Twitter)" href="https://twitter.com/ThatDuds"/>
-                        <NavLink name="Linkedin" href="https://www.linkedin.com/in/harry-martel-062151230/"/>
-                        <NavLink name="Email" href="mailto:harry.martel@hotmail.com"/>
+                        <NavLink name="X (Twitter)" target="_blank" href="https://twitter.com/ThatDuds"/>
+                        <NavLink name="Linkedin" target="_blank" href="https://www.linkedin.com/in/harry-martel-062151230/"/>
+                        <NavLink name="Email" target="_blank" href="mailto:harry.martel@hotmail.com"/>
                     </NavSection>
                     <p class="absolute bottom-4 left-6 opacity-40 italic text-xs">Made by Harry Martel</p>
                 </div>

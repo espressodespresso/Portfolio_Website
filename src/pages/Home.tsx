@@ -1,5 +1,5 @@
 import {JSXElement} from "solid-js";
-import Card, {cardTypes} from "../components/Card.tsx";
+import Card, {cardTypes} from "../components/cards/Card.tsx";
 import Tech from "../components/Tech.tsx";
 
 import img from "../assets/icons/test.jpeg";
@@ -8,10 +8,13 @@ import rust from "../assets/icons/rust.svg";
 import csharp from "../assets/icons/csharp.svg";
 import Input from "../components/Input.js";
 import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
+import Layout from "../components/Layout.js";
 
 export default function Home(): JSXElement {
+
+
     return (
-        <>
+        <Layout>
             <section id="about_me">
                 <div class="flex-col pt-24 pb-12 text-center">
                     <img
@@ -91,29 +94,32 @@ export default function Home(): JSXElement {
                 <div class="flex-col text-center">
                     <h1 class="text-3xl font-extrabold text-gray-100">Contact Me!</h1>
                     <p class="text-lg font-light text-gray-200 italic">I'm pretty friendly you know...</p>
-                    <div class="grid smigrid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-xl mt-1 mb-3">
-                        <Input type="text" id="firstname" placeholder="First Name" context=""/>
-                        <Input type="text" id="lastname" placeholder="Last Name" context=""/>
-                    </div>
-                    <Input type="email" id="email" placeholder="Email Address" context=" mb-3"/>
-                    <div class="ml-1 mr-1">
-                        <textarea id="content"
-                                  rows="4"
-                                  placeholder="Email Content"
-                                  class="w-full text-white rounded-lg p-3 inputBackground mb-3"/>
-                    </div>
-                    <a href="mailto:harry.martel@hotmail.com" type="button" class="inline-block ease-in-out
+                    <form action={import.meta.env.VITE_FORM_ENDPOINT} method="post">
+                        <div class="grid smigrid-cols-1 md:grid-cols-1 lg:grid-cols-2 min-w-xl mt-1 mb-3">
+                            <Input type="text" name="name" id="firstname" placeholder="First Name" context=""/>
+                            <Input type="text" name="name" id="lastname" placeholder="Last Name" context=""/>
+                        </div>
+                        <Input type="email" name="email" id="email" placeholder="Email Address" context=" mb-3"/>
+                        <div class="ml-1 mr-1">
+                            <textarea id="content"
+                                      name="message"
+                                      rows="4"
+                                      placeholder="Email Content"
+                                      class="w-full text-white rounded-lg p-3 inputBackground mb-3"/>
+                        </div>
+                        <button type="submit" class="inline-block ease-in-out
                      hover:scale-110 transition-transform border-green-700 bg-green-500 text-gray-600
                      border-solid rounded-xl border-2 font-bold text-sm pl-15 pr-15 pt-4 pb-4">
-                        Contact
-                    </a>
+                            Contact
+                        </button>
+                    </form>
                     <br/>
                     <br/>
-                    <SocialButtonGroup inverted="true" />
+                    <SocialButtonGroup inverted="true"/>
                     <br/>
                     <br/>
                 </div>
             </section>
-        </>
+        </Layout>
     )
 }

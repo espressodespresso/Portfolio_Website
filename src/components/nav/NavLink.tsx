@@ -1,9 +1,9 @@
 import {JSXElement} from "solid-js";
+import {A} from "@solidjs/router";
 
 export default function NavLink(props: any): JSXElement {
     return (
-        <a class="text-sm font-medium"
-           href={props.href}>{props.name}</a>
+        <A class="text-sm font-medium" target={props.target} href={props.href}>{props.name}</A>
     )
 
 }
