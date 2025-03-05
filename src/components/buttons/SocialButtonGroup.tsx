@@ -8,6 +8,10 @@ import mail from "../../assets/icons/mail.svg";
 
 let classList: string = "";
 
+interface SocialButtonGroupProps {
+    inverted?: boolean
+}
+
 export default function SocialButtonGroup(props: any): JSXElement {
     if(props.inverted) {
         classList = "invert-50 sepia-50 hue-rotate-180"

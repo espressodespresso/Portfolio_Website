@@ -1,6 +1,6 @@
 import {Component, lazy} from 'solid-js';
 import 'flowbite';
-import {Route, Router} from "@solidjs/router";
+import {Router} from "@solidjs/router";
 
 const routes = [
     {

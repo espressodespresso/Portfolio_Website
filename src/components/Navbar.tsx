@@ -26,7 +26,7 @@ export default function Navbar(): JSXElement {
         <div class="fixed flex" id="nav">
             <div class="pt-5 pl-7 pr-7 min-h-dvh" id="nav-theme">
                 <div class="flex flex-col">
-                    <h1 class="text-xl font-bold">Directory</h1>
+                    <h1 class="text-2xl font-bold">Directory</h1>
                     <NavSection header="Homepage" href="/">
                         <NavLink name="About me" href="/#about_me"/>
                         <NavLink name="Featured" href="/#featured"/>
@@ -61,7 +61,7 @@ export default function Navbar(): JSXElement {
                                        nav_name="Messaging (Java)"/>
                     </NavSection>
                     <br/>
-                    <NavSection header="Contact Me">
+                    <NavSection header="Contact Me" href="/#contact_me">
                         <NavLink name="X (Twitter)" target="_blank" href="https://twitter.com/ThatDuds"/>
                         <NavLink name="Linkedin" target="_blank" href="https://www.linkedin.com/in/harry-martel-062151230/"/>
                         <NavLink name="Email" target="_blank" href="mailto:harry.martel@hotmail.com"/>

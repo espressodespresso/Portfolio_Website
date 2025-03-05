@@ -11,8 +11,6 @@ import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
 import Layout from "../components/Layout.js";
 
 export default function Home(): JSXElement {
-
-
     return (
         <Layout>
             <section id="about_me">

@@ -1,6 +1,12 @@
 import {JSXElement} from "solid-js";
 
-export default function FeaturesCard(props: any): JSXElement {
+interface FeaturesCardProps {
+    emoji: string,
+    title: string,
+    description: string
+}
+
+export default function FeaturesCard(props: FeaturesCardProps): JSXElement {
     return (
         <div class="flex justify-center p-1">
             {props.emoji}

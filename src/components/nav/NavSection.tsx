@@ -1,9 +1,15 @@
 import {JSXElement} from "solid-js";
 
-export default function NavSection(props: any): JSXElement {
+interface NavSectionProps {
+    header: string,
+    children: JSXElement,
+    href?: string
+}
+
+export default function NavSection(props: NavSectionProps): JSXElement {
     return (
-        <div class="grid grid-cols-1">
-            <h2 class="text-lg font-thin">{props.header}</h2>
+        <div class={`grid grid-cols-1 ${props.href}`}>
+            <a href={props.href} class="text-xl font-thin">{props.header}</a>
             {props.children}
         </div>
     )

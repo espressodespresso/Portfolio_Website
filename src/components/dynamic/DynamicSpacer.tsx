@@ -1,6 +1,10 @@
 import {JSXElement} from "solid-js";
 
-export default function DynamicSpacer(props: any): JSXElement {
+interface DynamicSpacerProps {
+    id: string;
+}
+
+export default function DynamicSpacer(props: DynamicSpacerProps): JSXElement {
     return (
         <div class={`spacer ${props.id}Spacer`}/>
     )

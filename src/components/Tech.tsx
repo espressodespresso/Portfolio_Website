@@ -1,7 +1,12 @@
 import check from "../assets/icons/checkmark.svg";
 import {JSXElement} from "solid-js";
 
-export default function Tech(props: any): JSXElement {
+interface TechProps {
+    title: string,
+    level: string
+}
+
+export default function Tech(props: TechProps): JSXElement {
     return (
         <div class="grid tech m-2">
             <img src={check} width="40em" alt="a checkmark"/>

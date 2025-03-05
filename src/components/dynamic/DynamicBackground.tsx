@@ -11,7 +11,13 @@ const options = {
     messaging: messagingURL
 }
 
-export default function DynamicBackground(props: { id: keyof typeof options, children: JSXElement, class: string}): JSXElement {
+interface DynamicBackgroundProps {
+    id: keyof typeof options,
+    children: JSXElement,
+    class: string
+}
+
+export default function DynamicBackground(props: DynamicBackgroundProps): JSXElement {
     const backgroundImage = createMemo(() => options[props.id] ?? "");
 
     return (

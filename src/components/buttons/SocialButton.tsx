@@ -1,6 +1,11 @@
 import {JSXElement} from "solid-js";
 
-export default function SocialButton(props: any): JSXElement {
+interface SocialButtonProps {
+    href: string,
+    children: JSXElement
+}
+
+export default function SocialButton(props: SocialButtonProps): JSXElement {
     return (
         <a href={props.href}
            target="_blank"
