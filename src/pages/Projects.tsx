@@ -18,7 +18,7 @@ export default function Projects(): JSXElement {
     createEffect(() => {
         const projectName: string = params.name;
         if(projectName) {
-            fetch(`http://localhost:4000/projects/${projectName}`)
+            fetch(`http://${import.meta.env.VITE_IP}:4000/projects/${projectName}`)
                 .then((response: Response) => response.json())
                 .then((data) => {
                     setProject(data);
@@ -116,9 +116,9 @@ export default function Projects(): JSXElement {
                             <h4 class="pt-1 italic">Full-stack Typescript Approach</h4>
                             <br/>
                             <div class={`grid ${(project()!["tech_stack"] as object[]).length === 1 ? "grid-cols-1"
-                                : "sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"} place-items-center min-w-4xl`}>
+                                : "sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"} place-items-center`}>
                                 <For each={project()!["tech_stack"]}>
-                                    {(object) => <Card type={cardTypes.medium}
+                                    {(object) => <Card type={cardTypes.project}
                                                        title={object["title"]}
                                                        disabled_link={true}>
                                         <For each={object["techs"]}>
@@ -193,13 +193,13 @@ export default function Projects(): JSXElement {
                                    class="border-gray-500 bg-gray-300
                                  text-black border-solid rounded-xl border-2 font-bold
                                   text-sm pt-4 pb-4 opacity-85 sm:mr-0 md:mr-2 lg:mr-2 ease-in-out
-                                  hover:scale-110 w-60"
+                                  hover:scale-110 transition-transform w-60"
                                    onClick={toggleEnlargeIFrame}>Open README.md</a>
                                 <a type="button"
                                    class="border-gray-500 bg-gray-300
                                  text-black border-solid rounded-xl border-2 font-bold
                                   text-sm  pt-4 pb-4 opacity-85 sm:ml-0 md:ml-2 lg:ml-2 ease-in-out
-                                  hover:scale-110 w-60"
+                                  hover:scale-110 transition-transform w-60"
                                    href={project()!["github_project"]}
                                    target="_blank">Open Project</a>
                             </div>
@@ -221,7 +221,7 @@ export default function Projects(): JSXElement {
                     <iframe src={""} ref={enlargedIFrameElement}
                             class="absolute w-180 min-w-100 h-200 min-h-100"></iframe>
                     <button ref={toggleEnlargeButton}
-                            class="absolute top-0 right-0 p-5 ease-in-out hover:scale-125"
+                            class="absolute top-15 md:top-0 right-0 p-4 ease-in-out hover:scale-125"
                             onClick={(event) => (enlargeType() ? toggleEnlargeIFrame() : toggleEnlargeImage(event))}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                              x="0px"

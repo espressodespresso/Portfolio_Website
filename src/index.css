@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @layer components {
-  #nav-theme {
+  .nav-theme {
     background: rgba(244, 243, 239, 0.6);
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
@@ -13,7 +13,7 @@
   #nav {
     align-items: flex-start;
     justify-content: flex-start;
-    z-index: 9 !important;
+    z-index: 9999 !important;
   }
 
   #nav-toggle {
@@ -38,9 +38,14 @@
   .spacer {
     aspect-ratio: 900/200;
     width: 100%;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 101% 101%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transform: translate(0, 0);
   }
 
   .homeLayer1 {
@@ -61,13 +66,10 @@
     grid-template-columns: 20% 80%;
   }
 
-  .tech-grid {
-    min-width: 30rem;
-  }
-
   .inputBackground {
     background: rgba(95, 95, 95, 0.5);
   }
+
 }
 
 html {
@@ -89,6 +91,10 @@ section {
 
 h3 {
   font-weight: bold;
+}
+
+svg {
+  display: block;
 }
 
 @layer projects {

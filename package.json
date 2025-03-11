@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -23,6 +23,7 @@
     "postcss": "^8.5.3",
     "solid-js": "^1.9.3",
     "solid-prevent-scroll": "^0.1.10",
+    "svgo": "^3.3.2",
     "tailwindcss": "^4.0.8"
   }
 }
