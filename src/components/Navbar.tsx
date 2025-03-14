@@ -32,7 +32,8 @@ export default function Navbar(): JSXElement {
                             currentSubSection={currentSubSection}
                             showSubSection={showSubSection}
                             watermark={true}
-                            scrollActive={scrollActive()}/>
+                            scrollActive={scrollActive()}
+                            activeSubLinks={true}/>
                 </div>
                 <button type="button" class="pl-5 pt-8" id="nav-toggle" onClick={() => {
                     const nav_theme: HTMLElement = (document.getElementsByClassName("nav-theme")[0] as HTMLElement);
@@ -54,7 +55,8 @@ export default function Navbar(): JSXElement {
                                 currentSubSection={currentSubSection}
                                 showSubSection={showSubSection}
                                 watermark={false}
-                                scrollActive={scrollActive()}/>
+                                scrollActive={scrollActive()}
+                                activeSubLinks={false}/>
                     </div>
                 </Show>
                 <div class="fixed right-0 top-0 z-[95]">

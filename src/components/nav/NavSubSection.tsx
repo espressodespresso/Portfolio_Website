@@ -8,14 +8,15 @@ interface NavSubSectionProps {
     currentSubSection: Accessor<string>,
     showSubSection: Accessor<boolean>,
     id: string,
-    nav_name: string
+    nav_name: string,
+    activeSubLinks: boolean
 }
 
 export default function NavSubSection(props: NavSubSectionProps): JSXElement {
     return (
         <div onClick={() => (props.setShowSubSection(true) && props.setCurrentSubSection(props.id))}>
             <NavLink name={props.nav_name} href={`/project/${props.id}`}/>
-            <Show when={props.showSubSection() && props.currentSubSection() === props.id}>
+            <Show when={props.showSubSection() && props.currentSubSection() === props.id && props.activeSubLinks}>
                 <NavSubLinks id={props.id}/>
             </Show>
         </div>

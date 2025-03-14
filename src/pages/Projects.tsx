@@ -217,18 +217,19 @@ export default function Projects(): JSXElement {
                     <div class="absolute inset-0 backdrop-blur-lg"/>
                     <img src={""}
                          ref={enlargedImageElement}
+                         alt="screenshot of program and/or relevant code"
                          class="w-250 h-auto relative z-10"/>
                     <iframe src={""} ref={enlargedIFrameElement}
-                            class="absolute w-180 min-w-100 h-200 min-h-100"></iframe>
+                            class="absolute w-full md:w-180 md:min-w-100 h-200 min-h-100"></iframe>
                     <button ref={toggleEnlargeButton}
-                            class="absolute top-15 md:top-0 right-0 p-4 ease-in-out hover:scale-125"
+                            class="absolute top-15 md:top-0 right-0 nav-theme rounded-2xl p-1.5 m-2 ease-in-out hover:scale-125"
                             onClick={(event) => (enlargeType() ? toggleEnlargeIFrame() : toggleEnlargeImage(event))}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                              x="0px"
                              y="0px"
                              width="35"
                              height="35"
-                             fill="white"
+                             fill="black"
                              viewBox="0 0 50 50">
                             <path
                                 d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875

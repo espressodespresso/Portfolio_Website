@@ -11,7 +11,7 @@ export default function Layout(props: LayoutProps) {
             <header>
                 <Navbar />
             </header>
-            <main>
+            <main class="overflow-hidden">
                 {props.children}
             </main>
         </>

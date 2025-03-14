@@ -9,7 +9,8 @@ interface NavDivProps {
     currentSubSection: Accessor<string>,
     showSubSection: Accessor<boolean>,
     watermark: boolean,
-    scrollActive: boolean
+    scrollActive: boolean,
+    activeSubLinks: boolean
 }
 
 export default function NavDiv(props: NavDivProps): JSXElement {
@@ -33,25 +34,29 @@ export default function NavDiv(props: NavDivProps): JSXElement {
                                currentSubSection={props.currentSubSection}
                                showSubSection={props.showSubSection}
                                id="attendance"
-                               nav_name="Attendance (TS)"/>
+                               nav_name="Attendance (TS)"
+                               activeSubLinks={props.activeSubLinks}/>
                 <NavSubSection setShowSubSection={props.setShowSubSection}
                                setCurrentSubSection={props.setCurrentSubSection}
                                currentSubSection={props.currentSubSection}
                                showSubSection={props.showSubSection}
                                id="bank_api"
-                               nav_name="Bank API (C#)"/>
+                               nav_name="Bank API (C#)"
+                               activeSubLinks={props.activeSubLinks}/>
                 <NavSubSection setShowSubSection={props.setShowSubSection}
                                setCurrentSubSection={props.setCurrentSubSection}
                                currentSubSection={props.currentSubSection}
                                showSubSection={props.showSubSection}
                                id="tetris"
-                               nav_name="Tetris (C#)"/>
+                               nav_name="Tetris (C#)"
+                               activeSubLinks={props.activeSubLinks}/>
                 <NavSubSection setShowSubSection={props.setShowSubSection}
                                setCurrentSubSection={props.setCurrentSubSection}
                                currentSubSection={props.currentSubSection}
                                showSubSection={props.showSubSection}
                                id="messaging"
-                               nav_name="Messaging (Java)"/>
+                               nav_name="Messaging (Java)"
+                               activeSubLinks={props.activeSubLinks}/>
             </NavSection>
             <br/>
             <NavSection header="Contact Me"
