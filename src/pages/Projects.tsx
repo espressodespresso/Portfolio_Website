@@ -9,6 +9,7 @@ import DynamicSpacer from "../components/dynamic/DynamicSpacer.js";
 import FeaturesCard from "../components/cards/FeaturesCard.js";
 import createPreventScroll from "solid-prevent-scroll";
 import Layout from "../components/Layout.js";
+import FadeIn from "../components/FadeIn.tsx";
 
 export default function Projects(): JSXElement {
     const params: Params = useParams();
@@ -16,7 +17,7 @@ export default function Projects(): JSXElement {
     const [loading, setLoading] = createSignal(true);
 
     createEffect(() => {
-        const projectName: string = params.name;
+        const projectName: string | undefined = params.name;
         if(projectName) {
             fetch(`http://${import.meta.env.VITE_IP}:4000/projects/${projectName}`)
                 .then((response: Response) => response.json())
@@ -94,6 +95,7 @@ export default function Projects(): JSXElement {
         <Show when={!loading()} fallback={<Query/>}>
             <Layout>
                 <div class="flex-col text-center">
+                    <FadeIn>
                     <DynamicBackground class={project()!["title_color"]} id={project()!["id"]}>
                         <div class="absolute inset-0 backdrop-blur-sm"/>
                         <div class="relative z-10 flex flex-col items-center justify-center">
@@ -102,6 +104,7 @@ export default function Projects(): JSXElement {
                             <p class="text-sm italic pt-2">↓ Scroll for more information below! ↓</p>
                         </div>
                     </DynamicBackground>
+                    </FadeIn>
                     <div class={"min-h-10"}
                          style={{
                              background: `linear-gradient(${project()!["gradient_color"]}, ${project()!["section_color"]})`

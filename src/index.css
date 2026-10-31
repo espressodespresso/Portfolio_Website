@@ -70,6 +70,17 @@
     background: rgba(95, 95, 95, 0.5);
   }
 
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+    will-change: opacity, transform;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 html {
@@ -176,5 +187,4 @@ svg {
     0% { transform: rotate(0deg) }
     100% { transform: rotate(360deg) }
   }
-
 }
