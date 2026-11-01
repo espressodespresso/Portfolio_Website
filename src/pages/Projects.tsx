@@ -10,6 +10,7 @@ import FeaturesCard from "../components/cards/FeaturesCard.js";
 import createPreventScroll from "solid-prevent-scroll";
 import Layout from "../components/Layout.js";
 import FadeIn from "../components/FadeIn.tsx";
+import {IoCheckmarkCircleOutline} from "solid-icons/io";
 
 export default function Projects(): JSXElement {
     const params: Params = useParams();
@@ -125,8 +126,7 @@ export default function Projects(): JSXElement {
                                                        title={object["title"]}
                                                        disabled_link={true}>
                                         <For each={object["techs"]}>
-                                            {(tech) => <Tech title={tech["title"]}
-                                                             level={tech["level"]}/>}
+                                            {(tech) => <Tech title={tech["title"]} level={tech["level"]} icon={<IoCheckmarkCircleOutline class="size-10 text-gray-500"/>}/>}
                                         </For>
                                     </Card>}
                                 </For>
@@ -209,7 +209,7 @@ export default function Projects(): JSXElement {
                         </section>
                         <div class="bg-[#3B4859]">
                             <br/>
-                            <SocialButtonGroup inverted="true"/>
+                            <SocialButtonGroup inverted={true}/>
                             <br/>
                             <br/>
                         </div>

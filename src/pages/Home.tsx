@@ -3,13 +3,22 @@ import Card, {cardTypes} from "../components/cards/Card.tsx";
 import Tech from "../components/Tech.tsx";
 
 import img from "../assets/icons/avatar.avif";
-import ts from "../assets/icons/ts.svg";
-import rust from "../assets/icons/rust.svg";
-import csharp from "../assets/icons/csharp.svg";
 import Input from "../components/Input.js";
 import SocialButtonGroup from "../components/buttons/SocialButtonGroup.js";
 import Layout from "../components/Layout.js";
 import FadeIn from "../components/FadeIn.tsx";
+import {
+    SiCplusplus,
+    SiCss, SiDotnet, SiHono,
+    SiHtml5,
+    SiJavascript,
+    SiKotlin,
+    SiReact,
+    SiSolid,
+    SiTypescript
+} from "solid-icons/si";
+import {TbOutlineBrandCSharp, TbOutlineBrandSolidjs} from "solid-icons/tb";
+import {AiOutlineJava} from "solid-icons/ai";
 
 export default function Home(): JSXElement {
     return (
@@ -39,25 +48,25 @@ export default function Home(): JSXElement {
                 <FadeIn>
                     <div class="flex-col text-center">
                         <h1 class="text-3xl font-bold">Featured Projects</h1>
-                        <p class="text-lg font-light italic accent-slate-800">Check out the Github Links!</p>
-                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+                        <p class="text-lg font-light italic accent-slate-800 pb-5">Explore a selection of my work and public development projects</p>
+                        <div class="grid grid-cols-1 lg:grid-cols-3">
                             <Card title="Attendance System"
                                   description="Third Year University Project which tracks and takes attendance for universites"
                                   type={cardTypes.home_featured}
                                   href="/project/attendance">
-                                <img src={ts} width="40em" alt="typescript logo" class="hover:animate-pulse"/>
+                                <SiTypescript class="size-10 text-blue-800"/>
                             </Card>
                             <Card title="Bank API"
                                   description="Built for a group university project replicating a banking system"
                                   type={cardTypes.home_featured}
                                   href="/project/bank_api">
-                                <img src={csharp} width="40em" alt="c-sharp logo" class="hover:animate-pulse"/>
+                                <TbOutlineBrandCSharp class="size-10 text-purple-800"/>
                             </Card>
                             <Card title="Tetris Game"
                                   description="Second Year University Project which recreates Tetris within the C# Terminal"
                                   type={cardTypes.home_featured}
                                   href="/project/tetris">
-                                <img src={csharp} width="40em" alt="c-sharp logo" class="hover:animate-pulse"/>
+                                <TbOutlineBrandCSharp class="size-10 text-purple-800"/>
                             </Card>
                         </div>
                     </div>
@@ -67,29 +76,37 @@ export default function Home(): JSXElement {
             <section class="bg-[#024b00] pb-10 min-w-dvw place-items-center" id="experience">
                 <FadeIn>
                     <div class="flex-col text-center">
-                        <h1 class="text-3xl font-extrabold text-gray-50">Regarding Experience</h1>
-                        <p class="text-lg font-light text-gray-200 italic">Generalised over 5+ Years</p>
-                        <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+                        <h1 class="text-3xl font-extrabold text-gray-50">Technical Experience</h1>
+                        <p class="text-lg font-light text-gray-200 italic pb-5">5+ Years of Practical Experience</p>
+                        <div class="grid grid-cols-1 xl:grid-cols-3 ">
                             <Card type={cardTypes.home_experience}
-                                  title="Web-based technologies"
+                                  title="Web Development Technologies"
                                   disabled_link={true}>
-                                <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-                                    <Tech title="Typescript" level="Advanced"/>
-                                    <Tech title="Javascript" level="Advanced"/>
-                                    <Tech title="CSS" level="Intermediate"/>
-                                    <Tech title="HTML" level="Intermediate"/>
-                                    <br/>
+                                <div class="grid xl:grid-cols-2 grid-cols-1 pb-10">
+                                    <Tech icon={<SiTypescript class="size-10 text-blue-800"/>} title="Typescript" level="Advanced"/>
+                                    <Tech icon={<SiJavascript class="size-10 text-yellow-500"/>} title="Javascript" level="Advanced"/>
+                                    <Tech icon={<SiCss class="size-10 text-purple-600"/>} title="CSS" level="Advanced"/>
+                                    <Tech icon={<SiHtml5 class="size-10 text-orange-600"/>} title="HTML" level="Advanced"/>
                                 </div>
                             </Card>
                             <Card type={cardTypes.home_experience}
-                                  title="General Languages"
+                                  title="Frameworks & Libraries"
                                   disabled_link={true}>
-                                <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 tech-grid">
-                                    <Tech title="C#" level="Advanced"/>
-                                    <Tech title="Java" level="Intermediate"/>
-                                    <Tech title="C++" level="Basic"/>
-                                    <Tech title="Rust" level="Basic"/>
-                                    <br/>
+                                <div class="grid xl:grid-cols-2 grid-cols-1 pb-10">
+                                    <Tech icon={<SiSolid class="size-10 text-blue-800"/>} title="SolidJS" level="Advanced"/>
+                                    <Tech icon={<SiReact class="size-10 text-blue-400"/>} title="React" level="Intermediate"/>
+                                    <Tech icon={<SiDotnet class="size-10 text-purple-800"/>} title=".NET" level="Intermediate"/>
+                                    <Tech icon={<SiHono class="size-10 text-red-600"/>} title="Hono" level="Advanced"/>
+                                </div>
+                            </Card>
+                            <Card type={cardTypes.home_experience}
+                                  title="Core Programming Languages"
+                                  disabled_link={true}>
+                                <div class="grid xl:grid-cols-2 grid-cols-1 pb-10">
+                                    <Tech icon={<TbOutlineBrandCSharp class="size-10 text-purple-800"/>} title="C#" level="Advanced"/>
+                                    <Tech icon={<AiOutlineJava class="size-10 text-orange-500"/>} title="Java" level="Intermediate"/>
+                                    <Tech icon={<SiCplusplus class="size-10 text-blue-500"/>} title="C++" level="Intermediate"/>
+                                    <Tech icon={<SiKotlin class="size-10 text-purple-300"/>} title="Kotlin" level="Intermediate"/>
                                 </div>
                             </Card>
                         </div>
@@ -100,8 +117,8 @@ export default function Home(): JSXElement {
             <section class="bg-[#092100] min-w-dvw place-items-center" id="contact_me">
                 <FadeIn>
                     <div class="flex-col text-center w-full sm:w-dvw md:w-150 lg:w-150 xl:w-150">
-                        <h1 class="text-3xl font-extrabold text-gray-100">Contact Me!</h1>
-                        <p class="text-lg font-light text-gray-200 italic">I'm pretty friendly you know...</p>
+                        <h1 class="text-3xl font-extrabold text-gray-100">Let's Connect</h1>
+                        <p class="text-lg font-light text-gray-200 italic pb-5">Interested in working together? I'd be delighted to hear from you</p>
                         <form action={import.meta.env.VITE_FORM_ENDPOINT} method="post">
                             <div class="grid sm:grid-cols-1 sm:min-w-md md:grid-cols-1 md:min-w-xl lg:grid-cols-2 lg:min-w-xl mt-1 mb-3">
                                 <Input type="text" name="name" id="firstname" placeholder="First Name" context=""/>
@@ -123,7 +140,7 @@ export default function Home(): JSXElement {
                         </form>
                         <br/>
                         <br/>
-                        <SocialButtonGroup inverted="true"/>
+                        <SocialButtonGroup inverted={true}/>
                         <br/>
                         <br/>
                     </div>

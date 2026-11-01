@@ -1,4 +1,4 @@
-import {Accessor, JSXElement, Setter, Show} from "solid-js";
+import {Accessor, JSX, JSXElement, Setter, Show} from "solid-js";
 import NavLink from "./NavLink.js";
 import NavSubLinks from "./NavSubLinks.js";
 
@@ -9,13 +9,14 @@ interface NavSubSectionProps {
     showSubSection: Accessor<boolean>,
     id: string,
     nav_name: string,
-    activeSubLinks: boolean
+    activeSubLinks: boolean,
+    icon?: JSX.Element,
 }
 
 export default function NavSubSection(props: NavSubSectionProps): JSXElement {
     return (
         <div onClick={() => (props.setShowSubSection(true) && props.setCurrentSubSection(props.id))}>
-            <NavLink name={props.nav_name} href={`/project/${props.id}`}/>
+            <NavLink icon={props.icon} name={props.nav_name} href={`/project/${props.id}`}/>
             <Show when={props.showSubSection() && props.currentSubSection() === props.id && props.activeSubLinks}>
                 <NavSubLinks id={props.id}/>
             </Show>
