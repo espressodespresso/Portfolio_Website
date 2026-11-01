@@ -28,12 +28,12 @@
     transform: translateX(-350%) rotateY(180deg);
   }
 
-  .card {
+  /*.card {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  }
+  }*/
 
   .spacer {
     aspect-ratio: 900/200;

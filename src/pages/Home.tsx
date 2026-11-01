@@ -81,32 +81,35 @@ export default function Home(): JSXElement {
                         <div class="grid grid-cols-1 xl:grid-cols-3 ">
                             <Card type={cardTypes.home_experience}
                                   title="Web Development Technologies"
-                                  disabled_link={true}>
+                                  disabled_link={true}
+                                  flipped={true}>
                                 <div class="grid xl:grid-cols-2 grid-cols-1 pb-10">
-                                    <Tech icon={<SiTypescript class="size-10 text-blue-800"/>} title="Typescript" level="Advanced"/>
-                                    <Tech icon={<SiJavascript class="size-10 text-yellow-500"/>} title="Javascript" level="Advanced"/>
-                                    <Tech icon={<SiCss class="size-10 text-purple-600"/>} title="CSS" level="Advanced"/>
-                                    <Tech icon={<SiHtml5 class="size-10 text-orange-600"/>} title="HTML" level="Advanced"/>
+                                    <Tech icon={<SiTypescript class="size-10 text-blue-800"/>} title="Typescript" level="Advanced" flipped={true}/>
+                                    <Tech icon={<SiJavascript class="size-10 text-yellow-500"/>} title="Javascript" level="Advanced" flipped={true}/>
+                                    <Tech icon={<SiCss class="size-10 text-purple-600"/>} title="CSS" level="Advanced" flipped={true}/>
+                                    <Tech icon={<SiHtml5 class="size-10 text-orange-600"/>} title="HTML" level="Advanced" flipped={true}/>
                                 </div>
                             </Card>
                             <Card type={cardTypes.home_experience}
                                   title="Frameworks & Libraries"
-                                  disabled_link={true}>
+                                  disabled_link={true}
+                                  flipped={true}>
                                 <div class="grid xl:grid-cols-2 grid-cols-1 pb-10">
-                                    <Tech icon={<SiSolid class="size-10 text-blue-800"/>} title="SolidJS" level="Advanced"/>
-                                    <Tech icon={<SiReact class="size-10 text-blue-400"/>} title="React" level="Intermediate"/>
-                                    <Tech icon={<SiDotnet class="size-10 text-purple-800"/>} title=".NET" level="Intermediate"/>
-                                    <Tech icon={<SiHono class="size-10 text-red-600"/>} title="Hono" level="Advanced"/>
+                                    <Tech icon={<SiSolid class="size-10 text-blue-800"/>} title="SolidJS" level="Advanced" flipped={true}/>
+                                    <Tech icon={<SiReact class="size-10 text-blue-400"/>} title="React" level="Intermediate" flipped={true}/>
+                                    <Tech icon={<SiDotnet class="size-10 text-purple-800"/>} title=".NET" level="Intermediate" flipped={true}/>
+                                    <Tech icon={<SiHono class="size-10 text-red-600"/>} title="Hono" level="Advanced" flipped={true}/>
                                 </div>
                             </Card>
                             <Card type={cardTypes.home_experience}
                                   title="Core Programming Languages"
-                                  disabled_link={true}>
+                                  disabled_link={true}
+                                  flipped={true}>
                                 <div class="grid xl:grid-cols-2 grid-cols-1 pb-10">
-                                    <Tech icon={<TbOutlineBrandCSharp class="size-10 text-purple-800"/>} title="C#" level="Advanced"/>
-                                    <Tech icon={<AiOutlineJava class="size-10 text-orange-500"/>} title="Java" level="Intermediate"/>
-                                    <Tech icon={<SiCplusplus class="size-10 text-blue-500"/>} title="C++" level="Intermediate"/>
-                                    <Tech icon={<SiKotlin class="size-10 text-purple-300"/>} title="Kotlin" level="Intermediate"/>
+                                    <Tech icon={<TbOutlineBrandCSharp class="size-10 text-purple-800"/>} title="C#" level="Advanced" flipped={true}/>
+                                    <Tech icon={<AiOutlineJava class="size-10 text-orange-500"/>} title="Java" level="Intermediate" flipped={true}/>
+                                    <Tech icon={<SiCplusplus class="size-10 text-blue-500"/>} title="C++" level="Intermediate" flipped={true}/>
+                                    <Tech icon={<SiKotlin class="size-10 text-purple-300"/>} title="Kotlin" level="Intermediate" flipped={true}/>
                                 </div>
                             </Card>
                         </div>

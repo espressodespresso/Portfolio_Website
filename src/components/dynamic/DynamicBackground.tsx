@@ -4,7 +4,7 @@ import bank_apiURL from "../../assets/backgrounds/bank_api.avif";
 import tetrisURL from "../../assets/backgrounds/tetris.avif";
 import messagingURL from "../../assets/backgrounds/messaging.avif";
 
-const options = {
+export const options = {
     attendance: attendanceURL,
     bank_api: bank_apiURL,
     tetris: tetrisURL,

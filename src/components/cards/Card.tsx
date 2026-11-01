@@ -1,12 +1,10 @@
 import {JSXElement, Show} from "solid-js";
+import GlassContainer from "../GlassContainer.tsx";
 
 export const cardTypes = {
-    project: "m-5 p-5 max-w-md card border-2 border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700" +
-        " w-full sm:min-w-110 md:min-w-115 lg:min-w-115 xl:min-w-120 min-h-85",
-    home_featured: "m-5 p-5 max-w-md card border-2 border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700" +
-        " sm:min-w-85 md:min-w-115 lg:min-w-85 xl:min-w-100 min-h-60",
-    home_experience: "m-5 p-5 max-w-md card border-2 border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700" +
-        " sm:min-w-100 md:min-w-115 lg:min-w-115 xl:min-w-120 min-h-85"
+    project: "m-5 p-5 max-w-md rounded-xl shadow-xl w-full min-w-110 md:min-w-115 lg:min-w-115 xl:min-w-120 min-h-85",
+    home_featured: "m-5 p-5 max-w-md rounded-xl shadow-xl min-w-85 md:min-w-115 lg:min-w-85 xl:min-w-100 min-h-60",
+    home_experience: "m-5 p-5 max-w-md rounded-xl shadow-xl min-w-100 md:min-w-115 lg:min-w-115 xl:min-w-120 min-h-85"
 }
 
 interface CardProps {
@@ -16,14 +14,15 @@ interface CardProps {
     disabled_link?: boolean,
     href?: string,
     children: JSXElement,
+    flipped?: boolean
 }
 
 export default function Card(props: CardProps): JSXElement {
     return (
-        <div class={`${props.type}`}>
+        <GlassContainer classes={`${props.type}`}>
             {props.children}
-            <h5 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">{props.title}</h5>
-            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">{props.description}</p>
+            <h5 class={`mb-2 text-2xl font-semibold ${props.flipped ? "text-white" : "text-gray-900"}`}>{props.title}</h5>
+            <p class={`mb-3 font-normal ${props.flipped ? "text-gray-200" : "text-gray-500"}`}>{props.description}</p>
             <Show when={!props.disabled_link}>
                 <a href={props.href} class="inline-flex font-medium items-center hover:underline">
                     See the Project
@@ -35,6 +34,6 @@ export default function Card(props: CardProps): JSXElement {
                     </svg>
                 </a>
             </Show>
-        </div>
+        </GlassContainer>
     )
 }
